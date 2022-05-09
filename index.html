@@ -3,14 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Monstr</title>
-    <!-- <script src='js/index.js'></script> -->
-    <script src='js/demo.js'></script>
+    <script  src="js/index.js" defer></script>
   </head>
   <body>
     <h1>Monstr Inc.</h1>
     <div id='create-monster'></div>
+    <form action="http://localhost:3000/monsters/?_limit=50" method="POST">                 
+    <input type="text" id='name' name="Name" placeholder="Monster's Name"/>
+    <input type="text" id='age' name="Age" placeholder="Monster's Age"/>
+    <input type="text" id='description' name="Description" placeholder="Monster's Description"/>
+    <input type="submit" id='create-monster' value="Create Monster"/>
+    </form>
     <div id='monster-container'></div>
-    <button id="back"><=</button>
-    <button id="forward">=></button>
+    <button id="back">Go Back</button>
+    <button id="forward">Go Forward</button>
   </body>
-</html>
+  </html>
+  
+  <!-- <script src='js/index.js'></script> -->
+  <!--<script defer src='js/demo.js'></script> -->
+
+<!-- Developer Notes from Jamond Turner:
+{} monsters.json contains my data---- the server listens here 
+1) Added a source link to my index.js where I am writing my code. deferred
+2) Moved the demo js/demo.js out of my html and commented out. 
+3) Added a form HTML element.
+4) Changed the button labels into text "Go Back" "Go Forward" from <= => I do not like using  '=' '>'
+characters in my HTML boilerplate.
+
+
+
+-->
