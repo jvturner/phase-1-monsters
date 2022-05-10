@@ -37,8 +37,11 @@ fetch("http://localhost:3000/monsters/?_limit=50", newConfigObject);
 const createMonster = document.getElementById('create-monster')
 
 // Event Listener on Submit prevents refresh
-document.addEventListener('submit', (e) => {
-    e.preventdefault()
+const form = document.getElementsByTagName('form')[0]
+console.log(form[0]);
+form.addEventListener('submit', (e) => {
+    e.preventDefault()    
+    console.log('submitting form')
 })
 
 // Fetch Request
